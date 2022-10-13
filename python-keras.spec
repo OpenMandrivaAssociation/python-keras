@@ -1,10 +1,12 @@
-%define module keras
+%global module keras
+%global mod %(m=%{module}; echo ${m:0:1})
 
 Summary:	A deep learning API written in Python
 Name:		python-%{module}
 Version:	2.3.1
 Release:	1
-Source0:	https://github.com/keras-team/%{module}/archive/refs/tags/%{version}/%{module}-%{version}.tar.gz
+Source0:	https://github.com/keras-team/%{module}/archive/refs/tags/v%{version}/%{module}-%{version}.tar.gz
+#Source0:	https://pypi.io/packages/source/%{mod}/%{module}/%{module}-%{version}.tar.gz
 License:	Expat
 Group:		Development/Python
 Url:		https://keras.io/
@@ -61,7 +63,8 @@ Keras is:
 %autosetup -n %{module}-%{version}
 
 %build
-%py3_build
+%py_build
 
 %install
-%py3_install
+%py_install
+
