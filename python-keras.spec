@@ -63,7 +63,7 @@ Keras is:
 %autosetup -n keras-%{version}
 
 %build
-#&%py_build
+#%%py_build
 python -m installer --destdir="%{buildroot}" *.whl
 
 %install
