@@ -1,12 +1,9 @@
-%global module keras
-%global mod %(m=%{module}; echo ${m:0:1})
-
 Summary:	A deep learning API written in Python
-Name:		python-%{module}
+Name:		python-keras
 Version:	2.11.0
 Release:	1
-Source0:	https://github.com/keras-team/%{module}/archive/refs/tags/v%{version}/%{module}-%{version}.tar.gz
-#Source0:	https://pypi.io/packages/source/%{mod}/%{module}/%{module}-%{version}.tar.gz
+Source0:	https://github.com/keras-team/keras/archive/refs/tags/v%{version}/keras-%{version}.tar.gz
+#Source0:	https://pypi.io/packages/source/m/keras/keras-%{version}.tar.gz
 License:	Expat
 Group:		Development/Python
 Url:		https://keras.io/
@@ -20,14 +17,16 @@ BuildRequires:	python3dist(nose)
 BuildRequires:	python3dist(numpy)
 #BuildRequires:	python3dist(pandas)
 BuildRequires:	python3dist(pillow)
+BuildRequires:	python3dist(pip)
 #BuildRequires:	python3dist(pydot)
-BuildRequires:	python3dist(pytest)
 BuildRequires:	python3dist(python-distutils-extra)
+BuildRequires:	python3dist(pytest)
+BuildRequires:	python3dist(pyyaml)
 BuildRequires:	python3dist(setuptools)
 BuildRequires:	python3dist(scipy)
 BuildRequires:	python3dist(six)
 BuildRequires:	python3dist(theano)
-BuildRequires:	python3dist(pyyaml)
+BuildRequires:	python3dist(wheel)
 
 BuildArch:	noarch
 
@@ -54,13 +53,13 @@ Keras is:
 %license LICENSE
 %doc README.md CONTRIBUTING.md
 %{py3_puresitedir}/docs
-%{py3_puresitedir}/%{module}
+%{py3_puresitedir}/keras
 %{py3_puresitedir}/*.egg-info/
 
 #-----------------------------------------------------------------------
 
 %prep
-%autosetup -n %{module}-%{version}
+%autosetup -n keras-%{version}
 
 %build
 %py_build
