@@ -13,6 +13,7 @@ BuildRequires:	pkgconfig(python3)
 BuildRequires:	python3dist(h5py)
 BuildRequires:	python3dist(keras-applications)
 BuildRequires:	python3dist(keras-preprocessing)
+BuildRequires:	python3dist(installer)
 BuildRequires:	python3dist(nose)
 BuildRequires:	python3dist(numpy)
 #BuildRequires:	python3dist(pandas)
@@ -54,7 +55,7 @@ Keras is:
 %doc README.md CONTRIBUTING.md
 %{py3_puresitedir}/docs
 %{py3_puresitedir}/keras
-%{py3_puresitedir}/*.egg-info/
+%{py3_puresitedir}/*.*-info/
 
 #-----------------------------------------------------------------------
 
@@ -63,6 +64,7 @@ Keras is:
 
 %build
 %py_build
+#python -m installer --destdir="%{buildroot}" *.whl
 
 %install
 %py_install
