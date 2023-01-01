@@ -3,8 +3,8 @@
 
 Summary:	A deep learning API written in Python
 Name:		python-%{module}
-Version:	2.3.1
-Release:	2
+Version:	2.11.0
+Release:	1
 Source0:	https://github.com/keras-team/%{module}/archive/refs/tags/v%{version}/%{module}-%{version}.tar.gz
 #Source0:	https://pypi.io/packages/source/%{mod}/%{module}/%{module}-%{version}.tar.gz
 License:	Expat
