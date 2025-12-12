@@ -1,7 +1,7 @@
 Summary:	A deep learning API written in Python
 Name:		python-keras
 Version:	2.12.0
-Release:	1
+Release:	2
 License:	Expat
 Group:		Development/Python
 Url:		https://keras.io/
