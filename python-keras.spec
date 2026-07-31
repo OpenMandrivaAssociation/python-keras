@@ -1,7 +1,7 @@
 Summary:	A deep learning API written in Python
 Name:		python-keras
-Version:	2.12.0
-Release:	3
+Version:	3.15.1
+Release:	1
 License:	Expat
 Group:		Development/Python
 Url:		https://keras.io/
@@ -64,7 +64,7 @@ Keras is:
 #-----------------------------------------------------------------------
 
 %prep
-%autosetup -c -n keras-%{version}
+%autosetup -c -n keras-3.15.1
 
 %build
 %py_build
